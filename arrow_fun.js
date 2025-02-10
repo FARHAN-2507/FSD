@@ -1,3 +1,5 @@
+
+//Arrow function
 let firstname = "FARHAN" ;
 let age = 6 ;
 let welcome = (age < 18) ?

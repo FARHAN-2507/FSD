@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http req</title>
+</head>
+<body>
+    <button id="loadData">Load Data</button>
+    <div id="dataContainer"></div>
+
+    <script>
+    document.getElementById('loadData').addEventListener('click', function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'data.txt', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById('dataContainer').innerText = xhr.responseText;
+            }
+        };
+        xhr.send();
+    });
+    </script>
+    
+</body>
+</html>

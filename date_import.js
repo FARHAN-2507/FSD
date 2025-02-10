@@ -1,5 +1,7 @@
-import { addDays, formatDate, getCurrentDate,  } from './date_export.js';
+function displayDate() {
+    const currentDate = new Date();
+    console.log("Original Date Object: ", currentDate);
+    return currentDate;
+}
 
-console.log(getCurrentDate());
-console.log(formatDate());
-console.log(addDays());
+export default displayDate;
